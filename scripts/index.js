@@ -2,7 +2,9 @@ import Router from "./lib/router.js";
 
 console.log("Developed by Dario Tecchia");
 
-$('.preload').fadeOut();
+$(document).ready(()=> {
+  $('.preload').fadeOut();
+});
 
 const router = new Router({
   mode: 'history',
