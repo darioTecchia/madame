@@ -1,14 +1,7 @@
-import Router from "./lib/router.js";
-
 console.log("Developed by Dario Tecchia");
 
-$(document).ready(()=> {
+$(document).ready(() => {
   $('.preload').fadeOut();
-});
-
-const router = new Router({
-  mode: 'history',
-  root: '/'
 });
 
 if (!mobileCheck()) {
@@ -32,24 +25,11 @@ if (!mobileCheck()) {
 
 }
 
-router
-  .add(/^caffetteria$/, 'caffetteria', () => {
-    console.log('caffetteria controller');
-
-  })
-  .add(/^cocktail$/, 'cocktail', () => {
-    console.log('cocktail controller');
-
-  })
-  .add(/^info$/, 'info', () => {
-    console.log('info controller');
-
-  })
-  .add(/./, () => {
-    console.log("else controller");
-    router.navigate('/');
-  })
-  .add('', 'home', () => {
-    // general controller
-    console.log('home controller');
-  });
+page.base(location.pathname.replace('/', ''));
+page('*', init.ctx);
+page('/', route.home);
+page('/info', route.info);
+page('/caffetteria', route.caffetteria);
+page('/cocktail', route.cocktail);
+page('*', render.content);
+page();
