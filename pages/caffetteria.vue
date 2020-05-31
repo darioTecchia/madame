@@ -7,7 +7,11 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head: {
+    title: 'Madamé - Caffetteria'
+  }
+}
 </script>
 
 <style>
