@@ -150,6 +150,7 @@ header .info-button {
   }
 
   header .menu-options {
+    font-size: 45px;
     display: flex;
     position: fixed !important;
     top: 0px;
