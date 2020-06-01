@@ -1,15 +1,18 @@
 <template>
   <div class="caffetteria">
-    <h1>
-      <a href>menu caffetteria</a>
-    </h1>
+    <MenuCaffetteria />
   </div>
 </template>
 
 <script>
+import MenuCaffetteria from '~/components/partials/MenuCaffetteria.vue'
+
 export default {
   head: {
     title: 'Madamé - Caffetteria'
+  },
+  components: {
+    MenuCaffetteria
   }
 }
 </script>
