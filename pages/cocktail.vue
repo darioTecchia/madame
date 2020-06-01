@@ -1,15 +1,18 @@
 <template>
   <div class="cocktail">
-    <h1>
-      <a href>menu cocktail</a>
-    </h1>
+    <MenuCocktail />
   </div>
 </template>
 
 <script>
+import MenuCocktail from '~/components/partials/MenuCocktail.vue'
+
 export default {
   head: {
     title: 'Madamé - Cocktail'
+  },
+  components: {
+    MenuCocktail
   }
 }
 </script>
