@@ -1,11 +1,11 @@
 <template>
   <div>
-    <img src="~/assets/menu/caffetteria/page_1.png" alt="" srcset="">
-    <img src="~/assets/menu/caffetteria/page_2.png" alt="" srcset="">
-    <img src="~/assets/menu/caffetteria/page_3.png" alt="" srcset="">
-    <img src="~/assets/menu/caffetteria/page_4.png" alt="" srcset="">
-    <img src="~/assets/menu/caffetteria/page_5.png" alt="" srcset="">
-    <img src="~/assets/menu/caffetteria/page_6.png" alt="" srcset="">
+    <img src="~/assets/menu/caffetteria/page_1.png">
+    <img src="~/assets/menu/caffetteria/page_2.png">
+    <img src="~/assets/menu/caffetteria/page_3.png">
+    <img src="~/assets/menu/caffetteria/page_4.png">
+    <img src="~/assets/menu/caffetteria/page_5.png">
+    <img src="~/assets/menu/caffetteria/page_6.png">
   </div>
 </template>
 
@@ -15,6 +15,6 @@ export default {}
 
 <style>
 img {
-  width: 90%;
+  width: 100%;
 }
 </style>
