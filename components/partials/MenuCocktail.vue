@@ -26,7 +26,7 @@ export default {}
 
 <style scoped>
 img {
-  width: 100%;
+  width: 80%;
   height: 100%;
   opacity: 0;
 
@@ -36,5 +36,11 @@ img {
 .isLoaded {
   height: unset;
   opacity: 1;
+}
+
+@media all and (max-width: 768px) {
+  img {
+    width: 100%;
+  }
 }
 </style>
