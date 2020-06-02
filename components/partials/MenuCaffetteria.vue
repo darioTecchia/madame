@@ -16,5 +16,14 @@ export default {}
 <style scoped>
 img {
   width: 100%;
+  height: 100%;
+  opacity: 0;
+
+  transition: opacity ease-in 1s;
+}
+
+.isLoaded {
+  height: unset;
+  opacity: 1;
 }
 </style>
