@@ -107,7 +107,7 @@ header .info-button {
   font-size: var(--std-size);
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 823px) {
   .bounce-enter-active {
     animation: bounce-in .5s;
   }
