@@ -45,6 +45,7 @@ a:visited {
 
 * {
   font-weight: lighter;
+  background-color: white !important;
 }
 
 body {
