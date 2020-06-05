@@ -1,10 +1,7 @@
 <template>
   <header>
-    <div
-      class="menu"
-      @mouseover="hover = true"
-      @mouseleave="hover = false">
-      <span v-show="!hover" class="menu-button upper-case">menú</span>
+    <div class="menu">
+      <span @click="hover = true" class="menu-button upper-case">menú</span>
       <transition name="bounce">
         <div v-show="hover" @click="hover = false" class="menu-options">
           <nuxt-link to="/cocktail">cocktail</nuxt-link>
@@ -49,11 +46,13 @@ header {
   align-content: space-between;
   justify-content: space-between;
   z-index: 99;
+  background-color: unset !important;
 }
 
 header > * {
   width: 18%;
   flex: 0 1 18%;
+  background-color: transparent;
 }
 
 header .menu {
@@ -67,6 +66,17 @@ header .menu-button:hover {
 
 header .menu .menu-options {
   position: absolute;
+  font-size: 45px;
+  display: flex;
+  position: fixed !important;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #fff;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 header .menu .menu-options a {
@@ -107,24 +117,24 @@ header .info-button {
   font-size: var(--std-size);
 }
 
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @media all and (max-width: 823px) {
-  .bounce-enter-active {
-    animation: bounce-in .5s;
-  }
-  .bounce-leave-active {
-    animation: bounce-in .5s reverse;
-  }
-  @keyframes bounce-in {
-    0% {
-      transform: scale(0);
-    }
-    50% {
-      transform: scale(1.5);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
 
   header .menu {
     font-size: var(--petit-size);
@@ -147,20 +157,6 @@ header .info-button {
 
   header .logo svg {
     height: 25px;
-  }
-
-  header .menu-options {
-    font-size: 45px;
-    display: flex;
-    position: fixed !important;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    background-color: #fff;
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
   }
 
 }
