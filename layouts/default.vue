@@ -45,12 +45,12 @@ a:visited {
 
 * {
   font-weight: lighter;
-  background-color: white !important;
 }
 
 body {
   font-family: AvantGarde;
   margin: 0px;
+  background: white !important;
 }
 
 .upper-case {
