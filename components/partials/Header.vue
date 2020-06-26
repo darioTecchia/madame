@@ -6,6 +6,8 @@
         <div v-show="hover" @click="hover = false" class="menu-options">
           <nuxt-link to="/cocktail">cocktail</nuxt-link>
           <nuxt-link to="/caffetteria">caffetteria</nuxt-link>
+          <nuxt-link to="/aperitivo">aperitivo</nuxt-link>
+          <nuxt-link to="/food">food</nuxt-link>
           <nuxt-link to="/info">info</nuxt-link>
         </div>
       </transition>
