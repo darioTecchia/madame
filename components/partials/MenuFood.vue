@@ -1,8 +1,8 @@
 <template>
   <div>
+    <img v-lazy-load data-src="~/assets/menu/food/page_3.png">
     <img v-lazy-load data-src="~/assets/menu/food/page_1.png">
     <img v-lazy-load data-src="~/assets/menu/food/page_2.png">
-    <img v-lazy-load data-src="~/assets/menu/food/page_3.png">
   </div>
 </template>
 
