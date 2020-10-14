@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .cocktail {
   display: flex;
   height: 100vh;

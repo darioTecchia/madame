@@ -1,11 +1,11 @@
 <template>
   <div>
-    <img src="~/assets/menu/caffetteria/page_1.png" alt="" srcset="">
-    <img src="~/assets/menu/caffetteria/page_2.png" alt="" srcset="">
-    <img src="~/assets/menu/caffetteria/page_3.png" alt="" srcset="">
-    <img src="~/assets/menu/caffetteria/page_4.png" alt="" srcset="">
-    <img src="~/assets/menu/caffetteria/page_5.png" alt="" srcset="">
-    <img src="~/assets/menu/caffetteria/page_6.png" alt="" srcset="">
+    <img v-lazy-load data-src="~/assets/menu/caffetteria/page_1.png">
+    <img v-lazy-load data-src="~/assets/menu/caffetteria/page_2.png">
+    <img v-lazy-load data-src="~/assets/menu/caffetteria/page_3.png">
+    <img v-lazy-load data-src="~/assets/menu/caffetteria/page_4.png">
+    <img v-lazy-load data-src="~/assets/menu/caffetteria/page_5.png">
+    <img v-lazy-load data-src="~/assets/menu/caffetteria/page_6.png">
   </div>
 </template>
 
@@ -13,8 +13,23 @@
 export default {}
 </script>
 
-<style>
+<style scoped>
 img {
-  width: 90%;
+  width: 80%;
+  height: 100%;
+  opacity: 0;
+
+  transition: opacity ease-in 1s;
+}
+
+.isLoaded {
+  height: unset;
+  opacity: 1;
+}
+
+@media all and (max-width: 768px) {
+  img {
+    width: 100%;
+  }
 }
 </style>

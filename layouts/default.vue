@@ -50,6 +50,7 @@ a:visited {
 body {
   font-family: AvantGarde;
   margin: 0px;
+  background: white !important;
 }
 
 .upper-case {
