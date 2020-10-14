@@ -1,5 +1,5 @@
 <template>
-  <div class="caffetteria">
+  <div class="the">
     <MenuThe />
   </div>
 </template>
@@ -9,7 +9,7 @@ import MenuThe from '~/components/partials/MenuThe.vue'
 
 export default {
   head: {
-    title: 'Madamé - Caffetteria'
+    title: 'Madamé - The'
   },
   components: {
     MenuThe
@@ -18,14 +18,14 @@ export default {
 </script>
 
 <style>
-.caffetteria {
+.the {
   display: flex;
   height: 100vh;
   justify-content: center;
   text-align: center;
 }
 
-.caffetteria h1 {
+.the h1 {
   align-self: center;
 }
 </style>
