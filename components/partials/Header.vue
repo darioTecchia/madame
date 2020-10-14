@@ -7,6 +7,7 @@
           <nuxt-link to="/cocktail">cocktail</nuxt-link>
           <nuxt-link to="/caffetteria">caffetteria</nuxt-link>
           <nuxt-link to="/aperitivo">aperitivo</nuxt-link>
+          <nuxt-link to="/the">thè</nuxt-link>
           <nuxt-link to="/food">food</nuxt-link>
           <nuxt-link to="/info">info</nuxt-link>
         </div>
