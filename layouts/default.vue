@@ -23,13 +23,16 @@ export default {
 
 <style>
 @font-face {
-  font-family: 'AvantGarde';
-  src: url(../assets/fonts/AvantGarde.otf);
-}
-
-@font-face {
-  font-family: 'Diodrum';
-  src: url(../assets/fonts/Diodrum.otf);
+  font-family: 'ITC Avant Garde Gothic Std Extra';
+  src: url('../assets/fonts/ITCAvantGardeStd-XLt.eot');
+  src: url('../assets/fonts/ITCAvantGardeStd-XLt.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/ITCAvantGardeStd-XLt.woff2') format('woff2'),
+      url('../assets/fonts/ITCAvantGardeStd-XLt.woff') format('woff'),
+      url('../assets/fonts/ITCAvantGardeStd-XLt.ttf') format('truetype'),
+      url('../assets/fonts/ITCAvantGardeStd-XLt.svg#ITCAvantGardeStd-XLt') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 :root {
@@ -48,7 +51,7 @@ a:visited {
 }
 
 body {
-  font-family: AvantGarde;
+  font-family: 'ITC Avant Garde Gothic Std Extra';
   margin: 0px;
   background: white !important;
 }
