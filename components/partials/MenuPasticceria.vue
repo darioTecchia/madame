@@ -3,7 +3,6 @@
     <img v-lazy-load data-src="~/assets/menu/pasticceria-e-yogurt/page_1.jpeg">
     <img v-lazy-load data-src="~/assets/menu/pasticceria-e-yogurt/page_2.jpeg">
     <img v-lazy-load data-src="~/assets/menu/pasticceria-e-yogurt/page_3.jpeg">
-    <img v-lazy-load data-src="~/assets/menu/pasticceria-e-yogurt/page_4.jpeg">
   </div>
 </template>
 

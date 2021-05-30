@@ -2,7 +2,6 @@
   <div>
     <img v-lazy-load data-src="~/assets/menu/caffetteria/page_1.jpeg">
     <img v-lazy-load data-src="~/assets/menu/caffetteria/page_2.jpeg">
-    <img v-lazy-load data-src="~/assets/menu/caffetteria/page_3.jpeg">
   </div>
 </template>
 
