@@ -1,24 +1,24 @@
 <template>
-  <div class="food">
-    <MenuFood />
+  <div class="light-break">
+    <MenuBreak />
   </div>
 </template>
 
 <script>
-import MenuFood from '~/components/partials/MenuFood.vue'
+import MenuBreak from '~/components/partials/MenuBreak.vue'
 
 export default {
   head: {
-    title: 'Madamé - Food'
+    title: 'Madamé - Light Break'
   },
   components: {
-    MenuFood
+    MenuBreak
   }
 }
 </script>
 
 <style scoped>
-.food {
+.light-break {
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -26,7 +26,7 @@ export default {
   margin-top: 120px;
 }
 
-.food h1 {
+.light-break h1 {
   align-self: center;
 }
 </style>
