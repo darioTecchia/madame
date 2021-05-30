@@ -4,7 +4,6 @@
     <img v-lazy-load data-src="~/assets/menu/wine-list/page_2.jpeg">
     <img v-lazy-load data-src="~/assets/menu/wine-list/page_3.jpeg">
     <img v-lazy-load data-src="~/assets/menu/wine-list/page_4.jpeg">
-    <img v-lazy-load data-src="~/assets/menu/wine-list/page_5.jpeg">
   </div>
 </template>
 
