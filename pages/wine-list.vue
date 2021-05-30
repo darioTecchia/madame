@@ -1,31 +1,32 @@
 <template>
-  <div class="cocktail">
-    <MenuCocktail />
+  <div class="wine-list">
+    <MenuWine />
   </div>
 </template>
 
 <script>
-import MenuCocktail from '~/components/partials/MenuCocktail.vue'
+import MenuWine from '~/components/partials/MenuWine.vue'
 
 export default {
   head: {
-    title: 'Madamé - Cocktail'
+    title: 'Madamé - Wine List'
   },
   components: {
-    MenuCocktail
+    MenuWine
   }
 }
 </script>
 
 <style scoped>
-.cocktail {
+.wine-list {
   display: flex;
   height: 100vh;
   justify-content: center;
   text-align: center;
+  margin-top: 120px;
 }
 
-.cocktail h1 {
+.wine-list h1 {
   align-self: center;
 }
 </style>

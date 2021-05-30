@@ -1,31 +1,31 @@
 <template>
-  <div class="the">
-    <MenuThe />
+  <div class="bibite">
+    <MenuBibite />
   </div>
 </template>
 
 <script>
-import MenuThe from '~/components/partials/MenuThe.vue'
+import MenuBibite from '~/components/partials/MenuBibite.vue'
 
 export default {
   head: {
-    title: 'Madamé - The'
+    title: 'Madamé - Bibite'
   },
   components: {
-    MenuThe
+    MenuBibite
   }
 }
 </script>
 
-<style>
-.the {
+<style scoped>
+.bibite {
   display: flex;
   height: 100vh;
   justify-content: center;
   text-align: center;
 }
 
-.the h1 {
+.bibite h1 {
   align-self: center;
 }
 </style>

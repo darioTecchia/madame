@@ -1,7 +1,20 @@
 <template>
   <div>
-    <img v-lazy-load data-src="~/assets/menu/aperitivo/page_1.png">
-    <img v-lazy-load data-src="~/assets/menu/aperitivo/page_2.png">
+    <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_1.jpeg">
+    <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_2.jpeg">
+    <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_3.jpeg">
+    <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_4.jpeg">
+    <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_5.jpeg">
+    <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_6.jpeg">
+    <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_7.jpeg">
+    <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_8.jpeg">
+    <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_9.jpeg">
+    <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_10.jpeg">
+    <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_11.jpeg">
+    <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_12.jpeg">
+    <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_13.jpeg">
+    <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_14.jpeg">
+    <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_15.jpeg">
   </div>
 </template>
 
@@ -11,9 +24,10 @@ export default {}
 
 <style scoped>
 img {
-  width: 80%;
+  max-width: 1000px;
   height: 100%;
   opacity: 0;
+  display: block;
 
   transition: opacity ease-in 1s;
 }
