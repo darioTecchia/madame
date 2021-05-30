@@ -12,10 +12,9 @@ export default {}
 
 <style scoped>
 img {
-  max-width: 1000px;
+  width: 80%;
   height: 100%;
   opacity: 0;
-  display: block;
 
   transition: opacity ease-in 1s;
 }
