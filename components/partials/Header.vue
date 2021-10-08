@@ -8,7 +8,7 @@
           <nuxt-link to="/pasticceria-e-yogurt">pasticceria e yogurt</nuxt-link>
           <nuxt-link to="/bibite">bibite</nuxt-link>
           <nuxt-link to="/the">thè</nuxt-link>
-          <nuxt-link to="/light-break">light break</nuxt-link>
+          <nuxt-link to="/panini-e-stuzzicheria">panini e stuzzicheria</nuxt-link>
           <nuxt-link to="/aperitivi-e-cocktails">aperitivi e cocktails</nuxt-link>
           <nuxt-link to="/wine-list">wine list</nuxt-link>
           <nuxt-link to="/info">info</nuxt-link>
