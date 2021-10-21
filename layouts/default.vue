@@ -63,4 +63,13 @@ body {
 .hide {
   display: none;
 }
+
+.pages-wrapper {
+  padding-top: 66px;
+}
+
+.pages-wrapper svg {
+  height: 20%;
+  margin-bottom: 20px;
+}
 </style>

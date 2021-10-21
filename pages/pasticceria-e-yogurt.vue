@@ -1,5 +1,5 @@
 <template>
-  <div class="pasticceria-e-yogurt">
+  <div class="pasticceria-e-yogurt pages-wrapper">
     <MenuPasticceria />
   </div>
 </template>
@@ -23,7 +23,6 @@ export default {
   height: 100vh;
   justify-content: center;
   text-align: center;
-  margin-top: 120px;
 }
 
 .pasticceria-e-yogurt h1 {

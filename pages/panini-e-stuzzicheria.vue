@@ -1,5 +1,5 @@
 <template>
-  <div class="light-break">
+  <div class="light-break pages-wrapper">
     <MenuBreak />
   </div>
 </template>
@@ -23,7 +23,6 @@ export default {
   height: 100vh;
   justify-content: center;
   text-align: center;
-  margin-top: 120px;
 }
 
 .light-break h1 {

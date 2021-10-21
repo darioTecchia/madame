@@ -1,5 +1,6 @@
 <template>
   <div>
+    <LogoFace />
     <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_1.jpeg">
     <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_2.jpeg">
     <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_3.jpeg">
@@ -13,6 +14,7 @@
     <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_11.jpeg">
     <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_12.jpeg">
     <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_13.jpeg">
+    <img v-lazy-load data-src="~/assets/menu/aperitivi-e-cocktails/page_14.jpeg">
   </div>
 </template>
 

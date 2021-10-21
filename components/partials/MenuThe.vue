@@ -1,5 +1,6 @@
 <template>
-  <div class="the-pages-wrapper">
+  <div>
+    <LogoFace />
     <img src="~/assets/menu/the/the-01.png" alt="" srcset="">
     <img src="~/assets/menu/the/the-02.png" alt="" srcset="">
     <img src="~/assets/menu/the/the-03.png" alt="" srcset="">
@@ -20,8 +21,5 @@ export default {}
 <style>
 img {
   width: 90%;
-}
-.the-pages-wrapper {
-  margin-top: 120px;
 }
 </style>

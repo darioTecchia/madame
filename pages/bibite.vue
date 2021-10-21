@@ -1,5 +1,5 @@
 <template>
-  <div class="bibite">
+  <div class="bibite pages-wrapper">
     <MenuBibite />
   </div>
 </template>

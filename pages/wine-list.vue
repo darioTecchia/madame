@@ -1,5 +1,5 @@
 <template>
-  <div class="wine-list">
+  <div class="wine-list pages-wrapper">
     <MenuWine />
   </div>
 </template>
@@ -23,7 +23,6 @@ export default {
   height: 100vh;
   justify-content: center;
   text-align: center;
-  margin-top: 120px;
 }
 
 .wine-list h1 {

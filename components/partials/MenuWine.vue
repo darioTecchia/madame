@@ -1,5 +1,6 @@
 <template>
   <div>
+    <LogoFace />
     <img v-lazy-load data-src="~/assets/menu/wine-list/page_1.jpeg">
     <img v-lazy-load data-src="~/assets/menu/wine-list/page_2.jpeg">
     <img v-lazy-load data-src="~/assets/menu/wine-list/page_3.jpeg">
