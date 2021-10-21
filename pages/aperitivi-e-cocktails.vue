@@ -1,5 +1,5 @@
 <template>
-  <div class="aperitivo">
+  <div class="aperitivo pages-wrapper">
     <MenuAperitivo />
   </div>
 </template>

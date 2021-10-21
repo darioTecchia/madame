@@ -1,5 +1,5 @@
 <template>
-  <div class="pasticceria-e-yogurt">
+  <div class="pasticceria-e-yogurt pages-wrapper">
     <MenuPasticceria />
   </div>
 </template>

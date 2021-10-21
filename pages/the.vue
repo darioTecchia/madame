@@ -1,5 +1,5 @@
 <template>
-  <div class="the">
+  <div class="the pages-wrapper">
     <MenuThe />
   </div>
 </template>

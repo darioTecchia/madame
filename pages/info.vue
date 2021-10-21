@@ -36,7 +36,6 @@ export default {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-
 }
 
 .info > div {
@@ -52,11 +51,12 @@ export default {
 
   .info-box{
     width: fit-content !important;
+    padding: 10px 20px;
   }
 
   .info > div {
-    width: 40%;
-    flex: 0 1 40%;
+    width: 32%;
+    flex: 0 1 32%;
   }
 }
 </style>

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <LogoFace />
     <img src="~/assets/menu/the/the-01.png" alt="" srcset="">
     <img src="~/assets/menu/the/the-02.png" alt="" srcset="">
     <img src="~/assets/menu/the/the-03.png" alt="" srcset="">

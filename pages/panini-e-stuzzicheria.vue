@@ -1,5 +1,5 @@
 <template>
-  <div class="light-break">
+  <div class="light-break pages-wrapper">
     <MenuBreak />
   </div>
 </template>
