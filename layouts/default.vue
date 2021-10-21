@@ -69,7 +69,7 @@ body {
 }
 
 .pages-wrapper svg {
-  height: 20%;
+  /* height: 20%; */
   margin-bottom: 20px;
 }
 </style>
