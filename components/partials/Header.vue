@@ -71,7 +71,7 @@ header .menu-button:hover {
 
 header .menu .menu-options {
   position: absolute;
-  font-size: 45px;
+  font-size: 28px;
   display: flex;
   position: fixed !important;
   top: 0px;
@@ -81,13 +81,19 @@ header .menu .menu-options {
   background-color: #fff;
   text-align: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 70px 0;
 }
 
 header .menu .menu-options a {
   display: block;
   transition: all .2s;
   transition-timing-function: ease;
+}
+
+header .menu .menu-options a.nuxt-link-active {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 
 header .menu .menu-options a:hover {
