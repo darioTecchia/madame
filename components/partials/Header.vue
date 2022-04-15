@@ -6,6 +6,7 @@
         <div v-show="hover" @click="hover = false" class="menu-options">
           <nuxt-link to="/caffetteria">caffetteria</nuxt-link>
           <nuxt-link to="/pasticceria-e-yogurt">dolci</nuxt-link>
+          <nuxt-link to="/yogurt-e-crema-caffe">yogurt e crema caffè</nuxt-link>
           <nuxt-link to="/bibite">bibite</nuxt-link>
           <nuxt-link to="/the">thè</nuxt-link>
           <nuxt-link to="/panini-e-stuzzicheria">panini e stuzzicheria</nuxt-link>
