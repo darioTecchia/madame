@@ -1,11 +1,43 @@
-import type { NextPage } from 'next'
+import type { ReactElement } from 'react'
+import DefaultLayout from '../layouts/DefaultLayout'
 
-const Blog: NextPage = () => {
+export default function Index() {
   return (
-    <div>
-
+    <div className='container'>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
+      <h1>blog</h1>
     </div>
   )
 }
 
-export default Blog
+Index.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <DefaultLayout title='Madame Lounge Bar | Blog'>
+      {page}
+    </DefaultLayout>
+  )
+}

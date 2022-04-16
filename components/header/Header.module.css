@@ -1,113 +1,131 @@
-.menu {
-  background-color: red;
-}
-
 .header {
-  position: fixed;
-  top: 50px;
-  left: 50px;
-  right: 50px;
+  position: sticky;
+  padding: 24px;
+  top: 0;
   display: flex;
-  align-content: space-between;
+  align-items: center;
   justify-content: space-between;
   z-index: 99;
   background-color: unset !important;
+  text-transform: uppercase;
+  font-size: xx-large;
+  backdrop-filter: blur(1px);
 }
+
 .header > * {
   width: 18%;
   flex: 0 1 18%;
   background-color: transparent;
 }
-.header .menu {
+
+.menu {
   text-align: left;
-  font-size: var(--std-size);
 }
-.header .menu-button:hover {
+
+.menuButton {
   cursor: pointer;
+  width: fit-content;
 }
-.header .menu .menu-options {
+
+.menuOptions {
   position: absolute;
-  font-size: 28px;
   display: flex;
   position: fixed !important;
   top: 0px;
   bottom: 0px;
   left: 0px;
   right: 0px;
-  background-color: #fff;
+  background-color: #000;
+  color: #fff;
   text-align: center;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   padding: 70px 0;
 }
-.header .menu .menu-options a {
+
+.menuOptions a {
   display: block;
   transition: all .2s;
   transition-timing-function: ease;
+  width: fit-content;
 }
-.header .menu .menu-options a.nuxt-link-active {
+
+.menuOptions a.nuxt-link-active {
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
-.header .menu .menu-options a:hover {
+
+.menuOptions a:hover {
   margin-left: 10px;
 }
-.header .menu .menu-options a.collections-button {
+
+.menuOptions a.collections-button {
   cursor: pointer;
 }
-.header .menu .menu-options .collections-submenu {
+
+.menuOptions .collections-submenu {
   font-size: 35px;
   letter-spacing: 5px;
 }
-.header .menu .menu-options .collections-submenu a {
+
+.menuOptions .collections-submenu a {
   margin-bottom: 10px;
 }
-.header .logo {
+
+.logo {
   text-align: center;
   width: fit-content;
 }
-.header .logo svg {
+
+.logo svg {
   width: 100%;
   height: 50px;
 }
-.header .info-button {
-  text-align: right;
-  font-size: var(--std-size);
-}
+
 .bounce-enter-active {
   animation: bounce-in .5s;
 }
+
 .bounce-leave-active {
   animation: bounce-in .5s reverse;
 }
+
 @keyframes bounce-in {
   0% {
     transform: scale(0);
   }
+
   50% {
     transform: scale(1.5);
   }
+
   100% {
     transform: scale(1);
   }
 }
+
 @media all and (max-width: 823px) {
-  .header .menu {
-    font-size: var(--petit-size);
+  .menu {
+
   }
-  .header .info-button {
-    font-size: var(--petit-size);
+
+  .infoButton {
+
   }
+
   .header > * {
     width: 50%;
     flex: 0 1 50%;
   }
+
   .header {
     top: 25px;
     left: 25px;
     right: 25px;
   }
-  .header .logo svg {
+
+  .logo svg {
     height: 25px;
   }
 }

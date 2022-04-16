@@ -1,32 +1,51 @@
 import type { NextPage } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
+import LogoMadame from '../logo/LogoMadame'
+
 import styles from './Header.module.css'
 
 const Header: NextPage = () => {
+
+  const [showMenu, setshowMenu] = useState(false)
+
+  const toggleMenu = () => {
+    setshowMenu(!showMenu);
+  }
+
   return (
     <header className={styles.header}>
-      <div className="menu">
-        <span className="menu-button upper-case">menú</span>
-        <div className="menu-options">
-          <Link href="/caffetteria">caffetteria</Link>
-          <Link href="/pasticceria-e-yogurt">dolci</Link>
-          <Link href="/yogurt-e-crema-caffe">yogurt e crema caffè</Link>
-          <Link href="/bibite">bibite</Link>
-          <Link href="/the">thè</Link>
-          <Link href="/panini-e-stuzzicheria">panini e stuzzicheria</Link>
-          <Link href="/aperitivi-e-cocktails">aperitivi e cocktails</Link>
-          <Link href="/wine-list">wine list</Link>
-          <Link href="/info">info</Link>
-        </div>
+      <div className={styles.menu + ''}>
+        <div onClick={toggleMenu} className={styles.menuButton}>menú</div>
+        {
+          showMenu ? (<div onClick={toggleMenu} className={styles.menuOptions}>
+            <Link href="/blog">
+              <a>caffetteria</a>
+            </Link>
+            <Link href="/info">
+              <a>info</a>
+            </Link>
+            <div onClick={toggleMenu}>
+              close
+            </div>
+          </div>) : null
+        }
       </div >
 
-      <Link href="/">
-        <Image src='/vercel.svg' layout='fill' placeholder="blur" blurDataURL='/favicon.svg' />
-      </Link>
+      <div>
+        <Link href="/">
+          <a className={styles.logo}>
+            <LogoMadame />
+          </a>
+        </Link>
+      </div>
 
-      <div className="info-button upper-case">
-        <Link href="/info">info</Link>
+      <div className='txt-right'>
+        <Link href='/info'>
+          <a>
+            info
+          </a>
+        </Link>
       </div>
     </header >
   )
