@@ -10,12 +10,12 @@
   text-transform: uppercase;
   font-size: xx-large;
   backdrop-filter: blur(1px);
-}
 
-.header > * {
-  width: 18%;
-  flex: 0 1 18%;
-  background-color: transparent;
+  >* {
+    width: 18%;
+    flex: 0 1 18%;
+    background-color: transparent;
+  }
 }
 
 .menu {
@@ -28,13 +28,13 @@
 }
 
 .menuOptions {
-  position: absolute;
   display: flex;
   position: fixed !important;
   top: 0px;
   bottom: 0px;
   left: 0px;
   right: 0px;
+  height: 100vh;
   background-color: #000;
   color: #fff;
   text-align: center;
@@ -42,45 +42,43 @@
   justify-content: space-between;
   align-items: center;
   padding: 70px 0;
-}
-
-.menuOptions a {
-  display: block;
-  transition: all .2s;
-  transition-timing-function: ease;
-  width: fit-content;
-}
-
-.menuOptions a.nuxt-link-active {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.menuOptions a:hover {
-  margin-left: 10px;
-}
-
-.menuOptions a.collections-button {
   cursor: pointer;
-}
 
-.menuOptions .collections-submenu {
-  font-size: 35px;
-  letter-spacing: 5px;
-}
+  a {
+    display: block;
+    transition: all .2s;
+    transition-timing-function: ease;
+    width: fit-content;
+  }
 
-.menuOptions .collections-submenu a {
-  margin-bottom: 10px;
+  a.nuxt-link-active {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
+
+  a:hover {
+    margin-left: 10px;
+  }
+
+  a.collections-button {
+    cursor: pointer;
+  }
+
+  .collections-submenu {
+    font-size: 35px;
+    letter-spacing: 5px;
+  }
+
+  .collections-submenu a {
+    margin-bottom: 10px;
+  }
 }
 
 .logo {
-  text-align: center;
-  width: fit-content;
-}
-
-.logo svg {
-  width: 100%;
-  height: 50px;
+  svg {
+    width: 100%;
+    height: 50px;
+  }
 }
 
 .bounce-enter-active {
@@ -106,17 +104,15 @@
 }
 
 @media all and (max-width: 823px) {
-  .menu {
+  .menu {}
 
-  }
+  .infoButton {}
 
-  .infoButton {
-
-  }
-
-  .header > * {
-    width: 50%;
-    flex: 0 1 50%;
+  .header {
+    >* {
+      width: 50%;
+      flex: 0 1 50%;
+    }
   }
 
   .header {
@@ -125,7 +121,9 @@
     right: 25px;
   }
 
-  .logo svg {
-    height: 25px;
+  .logo {
+    svg {
+      height: 25px;
+    }
   }
 }

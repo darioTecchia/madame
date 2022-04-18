@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import LogoMadame from '../logo/LogoMadame'
 
-import styles from './Header.module.css'
+import styles from './Header.module.scss'
 
 const Header: NextPage = () => {
 
@@ -19,8 +19,14 @@ const Header: NextPage = () => {
         <div onClick={toggleMenu} className={styles.menuButton}>menú</div>
         {
           showMenu ? (<div onClick={toggleMenu} className={styles.menuOptions}>
+            <Link href="/">
+              <a>home</a>
+            </Link>
             <Link href="/blog">
               <a>caffetteria</a>
+            </Link>
+            <Link href="/events">
+              <a>events</a>
             </Link>
             <Link href="/info">
               <a>info</a>
