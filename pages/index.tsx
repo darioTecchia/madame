@@ -11,6 +11,7 @@ export default function Index() {
       <div className={styles.faceLogo}>
         <LogoFace />
       </div>
+      <h1>Ultimi eventi</h1>
       <EventsList />
     </div>
   )
