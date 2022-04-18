@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import LogoMadame from '../logo/LogoMadame'
+import LogoFace from '../logo/LogoFace'
 
 import styles from './Header.module.scss'
 
@@ -41,7 +41,7 @@ const Header: NextPage = () => {
       <div>
         <Link href="/">
           <a className={styles.logo}>
-            <LogoMadame />
+            <LogoFace />
           </a>
         </Link>
       </div>

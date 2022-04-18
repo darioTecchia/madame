@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 
-const LogoFace: NextPage = () => {
+const LogoMadame: NextPage = () => {
 
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 364.63196 96.240578">
@@ -33,4 +33,4 @@ const LogoFace: NextPage = () => {
   )
 }
 
-export default LogoFace
+export default LogoMadame

@@ -1,25 +1,29 @@
+import Link from 'next/link'
 import type { ReactElement } from 'react'
 import EventsList from '../components/events/Events.List'
-import LogoFace from '../components/logo/LogoFace'
 import DefaultLayout from '../layouts/DefaultLayout'
 
-import styles from  '../styles/index.module.scss'
+import styles from '../styles/index.module.scss'
 
 export default function Index() {
+  const events = [1, 2];
+
   return (
     <div className='container'>
-      <div className={styles.faceLogo}>
-        <LogoFace />
-      </div>
+      <Link href='/menu'>
+        <a>
+          <u><h1 className='txt-center'>Vai al menu</h1></u>
+        </a>
+      </Link>
       <h1>Ultimi eventi</h1>
-      <EventsList />
+      <EventsList events={events} />
     </div>
   )
 }
 
 Index.getLayout = function getLayout(page: ReactElement) {
   return (
-    <DefaultLayout title='Madame Lounge Bar'>
+    <DefaultLayout title='Madamé'>
       {page}
     </DefaultLayout>
   )

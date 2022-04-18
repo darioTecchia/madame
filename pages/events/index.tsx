@@ -13,7 +13,7 @@ export default function EventsIndex() {
 
 EventsIndex.getLayout = function getLayout(page: ReactElement) {
   return (
-    <DefaultLayout title='Madame Lounge Bar | Blog'>
+    <DefaultLayout title='Madamé - Blog'>
       {page}
     </DefaultLayout>
   )
