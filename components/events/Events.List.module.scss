@@ -1,5 +1,12 @@
 .event {
+  cursor: pointer;
+  display: block;
+
   h2 {
     margin-bottom: 0;
+  }
+
+  &:hover {
+    color: var(--red);
   }
 }

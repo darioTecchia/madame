@@ -12,11 +12,16 @@ export default function Index() {
     <div className='container'>
       <Link href='/menu'>
         <a>
-          <u><h1 className='txt-center'>Vai al menu</h1></u>
+          <u><h1 className=''>Esplora il nostro menú</h1></u>
         </a>
       </Link>
       <h1>Ultimi eventi</h1>
       <EventsList events={events} />
+      <Link href='/events'>
+        <a>
+          <u><h2 className=''>Vedi tutti gli eventi</h2></u>
+        </a>
+      </Link>
     </div>
   )
 }

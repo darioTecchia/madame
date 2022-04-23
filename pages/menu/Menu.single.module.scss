@@ -1,0 +1,11 @@
+.menuItem {
+  display: flex;
+  align-items: center;
+
+  hr {
+    flex: 1;
+    margin: 0 20px;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+}

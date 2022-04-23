@@ -16,23 +16,23 @@ const Header: NextPage = () => {
   return (
     <header className={styles.header}>
       <div className={styles.menu + ''}>
-        <div onClick={toggleMenu} className={styles.menuButton}>menú</div>
+        <div onClick={toggleMenu} className={styles.menuButton}>menu</div>
         {
           showMenu ? (<div onClick={toggleMenu} className={styles.menuOptions}>
             <Link href="/">
               <a>home</a>
             </Link>
             <Link href="/menu">
-              <a>menu</a>
+              <a>menú</a>
             </Link>
             <Link href="/events">
-              <a>events</a>
+              <a>eventi</a>
             </Link>
             <Link href="/info">
               <a>info</a>
             </Link>
             <div onClick={toggleMenu}>
-              close
+              chiudi
             </div>
           </div>) : null
         }
