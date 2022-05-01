@@ -7,17 +7,17 @@ interface EventsListProps {
   events: [any];
 }
 
-const EventsList: NextPage = ({ events = [] }: EventsListProps) => {
+const EventsList: NextPage<any, any> = (props: EventsListProps) => {
 
   return (
-    events.length > 0 ?
+    props?.events?.length > 0 ?
       <div className={styles.eventsList}>
-        {events?.map((e, i) => (
-          <Link key={i} href={'/events/' + i}>
+        {props?.events?.map((e, i) => (
+          <Link key={i} href={'/events/' + e.id}>
             <a className={styles.event}>
-              <h2>Evento {i + 1}</h2>
-              <sub>Lunedì 01/01/1970 - Madamé</sub>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat perspiciatis, itaque incidunt odio minus nihil architecto accusantium autem cupiditate maiores molestiae atque sapiente ducimus? Reiciendis eos modi cupiditate! Fuga, numquam.</p>
+              <h2>{e.fields.name}</h2>
+              <sub>{e.fields.date.toString()} - {e.fields.place}</sub>
+              <p>{e.fields.body}</p>
             </a>
           </Link>
         ))}
