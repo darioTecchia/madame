@@ -7,5 +7,6 @@ export interface Cocktail extends Airtable {
     "price": number;
     "menu": string[];
     "allergens": string;
+    "ingredients": string;
   }
 }
