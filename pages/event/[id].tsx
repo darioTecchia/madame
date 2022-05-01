@@ -20,22 +20,6 @@ export default function EventSingle({ event }: any) {
   )
 }
 
-// export const getStaticPaths: GetStaticPaths = async () => {
-//   try {
-//     const res = await axios.get('/event');
-//     const events = res.data;
-//     const paths = events.records.map((post: Event) => ({
-//       params: { id: post.id },
-//     }))
-//     return {
-//       'paths': paths,
-//       'fallback': false
-//     }
-//   } catch (error: any) {
-//     return { paths: [], fallback: false }
-//   }
-// }
-
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   try {
     const res = await axios.get(`/event/${params?.id}`);

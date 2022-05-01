@@ -35,22 +35,6 @@ export default function EventSingle({ menu, cocktails }: any) {
   )
 }
 
-// export const getStaticPaths: GetStaticPaths = async () => {
-//   try {
-//     const res = await axios.get('/menu');
-//     const menus = res.data;
-//     const paths = menus.records.map((menu: Menu) => ({
-//       params: { id: menu.id },
-//     }))
-//     return {
-//       'paths': paths,
-//       'fallback': false
-//     }
-//   } catch (error: any) {
-//     return { paths: [], fallback: false }
-//   }
-// }
-
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   try {
     let res = await axios.get(`/menu/${params?.id}`);
