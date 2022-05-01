@@ -1,32 +1,84 @@
-import { useRouter } from 'next/router'
 import type { ReactElement } from 'react'
 import DefaultLayout from '../../layouts/DefaultLayout'
+import axios from 'axios';
+import { GetStaticPaths, GetStaticProps } from 'next'
 
 import styles from './Menu.single.module.scss'
+import { Menu } from '../../models/Menu';
+import { Cocktail } from '../../models/Cocktail';
 
-export default function EventSingle() {
-
-  const router = useRouter()
-  const { id } = router.query
+export default function EventSingle({ menu, cocktails }: any) {
 
   return (
     <div className='container'>
-      <h1>Menu {id}</h1>
-      <sub>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque architecto labore beatae, perspiciatis quis quae dolor delectus cumque alias saepe libero quisquam earum quas corrupti, animi quidem, dicta nisi quos.</sub>
+      <h1>{menu.fields.name}</h1>
+      <sub>{menu.fields.description}</sub>
       <br />
       <br />
-      <div className={styles.menuItem}>
-        <h2>Gin Tonic</h2>
-        <hr />
-        <h2>5€</h2>
-      </div>
+      {
+        cocktails?.length > 0 ?
+          cocktails?.map((cocktail: Cocktail) =>
+            <div key={cocktail.id} className={styles.menuItemWrapper}>
+              <div className={styles.menuItem}>
+                <h2>{cocktail.fields.name}</h2>
+                <hr />
+                <h2>{cocktail.fields.price} €</h2>
+              </div>
+              {cocktail.fields.description && <sub><b>Descrizione</b>: {cocktail.fields.description}</sub>}
+              {cocktail.fields.ingredients && <sub><b>Ingredienti</b>: {cocktail.fields.ingredients}</sub>}
+              {cocktail.fields.allergens && <sub><b>Allergeni</b>: {cocktail.fields.allergens}</sub>}
+            </div>
+          )
+          : <span>NO</span>
+      }
     </div>
   )
 }
 
+export const getStaticPaths: GetStaticPaths = async () => {
+  try {
+    const res = await axios.get('/menu');
+    const menus = res.data;
+    const paths = menus.records.map((menu: Menu) => ({
+      params: { id: menu.id },
+    }))
+    return {
+      'paths': paths,
+      'fallback': false
+    }
+  } catch (error: any) {
+    return { paths: [], fallback: false }
+  }
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  try {
+    let res = await axios.get(`/menu/${params?.id}`);
+    let menu = res.data;
+
+    res = await axios.get(`/cocktail`, {
+      params: {
+        'filterByFormula': `FIND("${menu.fields.name}", {menu_ids})`
+      }
+    });
+    const cocktails = res.data.records;
+    console.log(cocktails);
+    return {
+      props: {
+        'menu': menu,
+        'cocktails': cocktails
+      }
+    }
+  } catch (error: any) {
+    console.log(error);
+
+    return { props: { 'error': error.code } }
+  }
+}
+
 EventSingle.getLayout = function getLayout(page: ReactElement) {
   return (
-    <DefaultLayout title='Madamé - Blog'>
+    <DefaultLayout title={'Madamé - ' + page.props.menu.fields.name}>
       {page}
     </DefaultLayout>
   )

@@ -1,11 +1,24 @@
-.menuItem {
-  display: flex;
-  align-items: center;
+.menuItemWrapper {
 
-  hr {
-    flex: 1;
-    margin: 0 20px;
-    border: none;
-    border-bottom: 1px solid black;
+  margin-bottom: 32px;
+
+  .menuItem {
+    display: flex;
+    align-items: center;
+
+    sub {
+      display: block;
+    }
+
+    h2 {
+      margin: 0px;
+    }
+
+    hr {
+      flex: 1;
+      margin: 0 20px;
+      border: none;
+      border-bottom: 1px solid black;
+    }
   }
 }
