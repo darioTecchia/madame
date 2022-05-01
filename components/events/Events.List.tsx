@@ -14,7 +14,7 @@ const EventsList: NextPage<any, any> = ({ events }: EventsListProps) => {
     events?.length > 0 ?
       <div className={styles.eventsList}>
         {events?.map((event: Event, i: number) => (
-          <Link key={i} href={'/events/' + event.id}>
+          <Link key={i} href={'/event/' + event.id}>
             <a className={styles.event}>
               <h2>{event.fields.name}</h2>
               <sub>{event.fields.date.toString()} - {event.fields.place}</sub>
