@@ -25,7 +25,7 @@ const Header: NextPage = () => {
             <Link href="/menu">
               <a>menú</a>
             </Link>
-            <Link href="/events">
+            <Link href="/event">
               <a>eventi</a>
             </Link>
             <Link href="/info">
