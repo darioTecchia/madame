@@ -62,7 +62,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       }
     });
     const cocktails = res.data.records;
-    console.log(cocktails);
     return {
       props: {
         'menu': menu,
@@ -70,7 +69,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       }
     }
   } catch (error: any) {
-    console.log(error);
 
     return { props: { 'error': error.code } }
   }
