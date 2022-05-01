@@ -2,23 +2,12 @@ import Link from 'next/link'
 import type { ReactElement } from 'react'
 import EventsList from '../components/events/Events.List'
 import DefaultLayout from '../layouts/DefaultLayout'
-import { Event } from '../models/Event'
+
+import axios from 'axios';
 
 import styles from '../styles/index.module.scss'
 
-export default function Index() {
-  const events: Event[] = [
-    {
-      "id": "rec01IsZuDijQJn4k",
-      "createdTime": new Date("2022-05-01T11:39:33.000Z"),
-      "fields": {
-        "name": "Evento",
-        "body": "Venite numerosi\n",
-        "date": new Date("2022-05-02T13:40:00.000Z"),
-        "place": "Madamé"
-      }
-    }
-  ];
+export default function Index({ events }: any) {
 
   return (
     <div className='container'>
@@ -37,6 +26,17 @@ export default function Index() {
     </div>
   )
 }
+
+export async function getStaticProps() {
+  try {
+    const res = await axios.get('/event');
+    const events = res.data;
+    return { props: { 'events': events.records } }
+  } catch (error: any) {
+    return { props: { 'error': error.code } }
+  }
+}
+
 
 Index.getLayout = function getLayout(page: ReactElement) {
   return (
