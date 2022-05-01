@@ -1,8 +1,14 @@
 .event {
   cursor: pointer;
   display: block;
+  margin-bottom: 22px;
 
   h2 {
+    margin: 0;
+  }
+
+  p {
+    margin-top: 8px;
     margin-bottom: 0;
   }
 

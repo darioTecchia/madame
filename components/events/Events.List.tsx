@@ -18,7 +18,7 @@ const EventsList: NextPage<any, any> = ({ events }: EventsListProps) => {
             <a className={styles.event}>
               <h2>{event.fields.name}</h2>
               <sub>{event.fields.date.toString()} - {event.fields.place}</sub>
-              <p>{event.fields.body}</p>
+              <p>{event.fields.short_body}</p>
             </a>
           </Link>
         ))}
