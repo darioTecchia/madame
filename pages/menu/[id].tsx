@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react'
 import DefaultLayout from '../../layouts/DefaultLayout'
 import axios from 'axios';
-import { GetStaticPaths, GetStaticProps } from 'next'
+import { GetStaticPaths, GetServerSideProps } from 'next'
 
 import styles from './Menu.single.module.scss'
 import { Menu } from '../../models/Menu';
@@ -35,23 +35,23 @@ export default function EventSingle({ menu, cocktails }: any) {
   )
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  try {
-    const res = await axios.get('/menu');
-    const menus = res.data;
-    const paths = menus.records.map((menu: Menu) => ({
-      params: { id: menu.id },
-    }))
-    return {
-      'paths': paths,
-      'fallback': false
-    }
-  } catch (error: any) {
-    return { paths: [], fallback: false }
-  }
-}
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   try {
+//     const res = await axios.get('/menu');
+//     const menus = res.data;
+//     const paths = menus.records.map((menu: Menu) => ({
+//       params: { id: menu.id },
+//     }))
+//     return {
+//       'paths': paths,
+//       'fallback': false
+//     }
+//   } catch (error: any) {
+//     return { paths: [], fallback: false }
+//   }
+// }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   try {
     let res = await axios.get(`/menu/${params?.id}`);
     let menu = res.data;

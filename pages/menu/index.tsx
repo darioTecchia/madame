@@ -3,13 +3,13 @@ import type { ReactElement } from 'react'
 import DefaultLayout from '../../layouts/DefaultLayout'
 import { Menu } from '../../models/Menu';
 import axios from 'axios';
-import { GetStaticProps } from 'next'
+import { GetServerSideProps } from 'next'
 
 import styles from './Menu.List.module.scss'
 export default function MenusIndex({ menus }: any) {
   return (
     <div className='container'>
-      {menus.length > 0 ?
+      {menus?.length > 0 ?
         <div className={styles.menuList}>
           {
             menus?.map((e: Menu) => (
@@ -27,7 +27,7 @@ export default function MenusIndex({ menus }: any) {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const res = await axios.get('/menu');
     const menus = res.data;

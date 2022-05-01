@@ -2,7 +2,7 @@ import type { ReactElement } from 'react'
 import EventsList from '../../components/events/Events.List'
 import DefaultLayout from '../../layouts/DefaultLayout'
 import axios from 'axios';
-import { GetStaticProps } from 'next'
+import { GetServerSideProps } from 'next'
 
 export default function EventsIndex({ events }: any) {
   return (
@@ -13,7 +13,7 @@ export default function EventsIndex({ events }: any) {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const res = await axios.get('/event');
     const events = res.data;

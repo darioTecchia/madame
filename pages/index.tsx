@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { ReactElement } from 'react'
 import EventsList from '../components/events/Events.List'
 import DefaultLayout from '../layouts/DefaultLayout'
-import { GetStaticProps } from 'next'
+import { GetServerSideProps } from 'next'
 
 import axios from 'axios';
 
@@ -28,7 +28,7 @@ export default function Index({ events }: any) {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const res = await axios.get('/event');
     const events = res.data;
