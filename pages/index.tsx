@@ -7,7 +7,7 @@ import { Event } from '../models/Event'
 import styles from '../styles/index.module.scss'
 
 export default function Index() {
-  const events: [Event] = [
+  const events: Event[] = [
     {
       "id": "rec01IsZuDijQJn4k",
       "createdTime": new Date("2022-05-01T11:39:33.000Z"),

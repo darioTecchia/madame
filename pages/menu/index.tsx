@@ -1,19 +1,34 @@
 import Link from 'next/link';
 import type { ReactElement } from 'react'
 import DefaultLayout from '../../layouts/DefaultLayout'
+import { Menu } from '../../models/Menu';
 
 import styles from './Menu.List.module.scss'
 export default function MenusIndex() {
-  const menus: any = [1, 2, 3];
+  const menus: Menu[] = [
+    {
+      "id": "recLONXs7DfSsZXye",
+      "createdTime": new Date("2022-04-27T15:07:15.000Z"),
+      "fields": {
+        "cocktails": [
+          "recz1gAjKZZAMqhNT",
+          "recR4EnSDaThlGWCl"
+        ],
+        "description": "desc",
+        "name": "Cocktail"
+      }
+    }
+  ];
+
   return (
     <div className='container'>
       {menus.length > 0 ?
         <div className={styles.menuList}>
-          {menus?.map((e, i) => (
+          {menus?.map((e: Menu, i) => (
             <Link key={i} href={'/menu/' + i}>
               <a className={styles.menu}>
-                <h1>Menu {i + 1}</h1>
-                <sub>Lorem ipsum dolor sit amet consectetur adipisicing elit. At sequi totam iusto aperiam excepturi! Natus, dicta! Suscipit consectetur repellat impedit eligendi, fugit corporis distinctio aut saepe alias vel est odit?</sub>
+                <h1>{e.fields.name}</h1>
+                <sub>{e.fields.description}</sub>
               </a>
             </Link>
           ))}

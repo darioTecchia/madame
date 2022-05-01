@@ -1,11 +1,11 @@
 import { Airtable } from "./Airtable"
 
-export interface Menu extends Airtable {
+export interface Cocktail extends Airtable {
   "fields": {
     "name": string;
     "description": string;
     "price": number;
-    "menu": [string];
+    "menu": string[];
     "allergens": string;
   }
 }

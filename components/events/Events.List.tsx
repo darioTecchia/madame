@@ -5,15 +5,15 @@ import { Event } from '../../models/Event';
 import styles from './Events.List.module.scss'
 
 interface EventsListProps {
-  events: [any];
+  events: Event[];
 }
 
-const EventsList: NextPage<any, any> = (props: EventsListProps) => {
+const EventsList: NextPage<any, any> = ({ events }: EventsListProps) => {
 
   return (
-    props?.events?.length > 0 ?
+    events?.length > 0 ?
       <div className={styles.eventsList}>
-        {props?.events?.map((event: Event, i: number) => (
+        {events?.map((event: Event, i: number) => (
           <Link key={i} href={'/events/' + event.id}>
             <a className={styles.event}>
               <h2>{event.fields.name}</h2>
