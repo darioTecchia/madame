@@ -1,19 +1,31 @@
 import type { ReactElement } from 'react'
 import EventsList from '../../components/events/Events.List'
 import DefaultLayout from '../../layouts/DefaultLayout'
+import axios from 'axios';
+import { GetStaticProps } from 'next'
 
-export default function EventsIndex() {
+export default function EventsIndex({ events }: any) {
   return (
     <div className='container'>
       <h1>Eventi</h1>
-      <EventsList />
+      <EventsList events={events} />
     </div>
   )
 }
 
+export const getStaticProps: GetStaticProps = async () => {
+  try {
+    const res = await axios.get('/event');
+    const events = res.data;
+    return { props: { 'events': events.records } }
+  } catch (error: any) {
+    return { props: { 'error': error.code } }
+  }
+}
+
 EventsIndex.getLayout = function getLayout(page: ReactElement) {
   return (
-    <DefaultLayout title='Madamé - Blog'>
+    <DefaultLayout title='Madamé - Eventi'>
       {page}
     </DefaultLayout>
   )

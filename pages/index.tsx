@@ -2,6 +2,7 @@ import Link from 'next/link'
 import type { ReactElement } from 'react'
 import EventsList from '../components/events/Events.List'
 import DefaultLayout from '../layouts/DefaultLayout'
+import { GetStaticProps } from 'next'
 
 import axios from 'axios';
 
@@ -18,7 +19,7 @@ export default function Index({ events }: any) {
       </Link>
       <h1>Ultimi eventi</h1>
       <EventsList events={events} />
-      <Link href='/events'>
+      <Link href='/event'>
         <a>
           <u><h2 className=''>Vedi tutti gli eventi</h2></u>
         </a>
@@ -27,7 +28,7 @@ export default function Index({ events }: any) {
   )
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   try {
     const res = await axios.get('/event');
     const events = res.data;
@@ -36,7 +37,6 @@ export async function getStaticProps() {
     return { props: { 'error': error.code } }
   }
 }
-
 
 Index.getLayout = function getLayout(page: ReactElement) {
   return (
