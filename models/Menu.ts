@@ -1,3 +1,4 @@
+import { Attachment } from "airtable";
 import { Airtable } from "./Airtable"
 
 export interface Menu extends Airtable {
@@ -5,5 +6,6 @@ export interface Menu extends Airtable {
     "cocktails": string[];
     "name": string;
     "description": string;
+    "attachments": Attachment
   }
 }
