@@ -35,7 +35,7 @@ export default function EventSingle({ menu, cocktails }: { menu: Menu, cocktails
       {
         menu.fields.attachments.length > 0 ?
           menu.fields.attachments.map(att =>
-            <Image key={att.id} src={att.url} width={att.width} height={att.height}></Image>
+            <Image placeholder='blur' blurDataURL={att.thumbnails.small.url} key={att.id} src={att.url} width={att.width} height={att.height}></Image>
           )
           : <span></span>
       }
