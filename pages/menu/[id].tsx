@@ -6,8 +6,9 @@ import { GetStaticPaths, GetServerSideProps } from 'next'
 import styles from './Menu.single.module.scss'
 import { Menu } from '../../models/Menu';
 import { Cocktail } from '../../models/Cocktail';
+import Image from 'next/image';
 
-export default function EventSingle({ menu, cocktails }: any) {
+export default function EventSingle({ menu, cocktails }: { menu: Menu, cocktails: Cocktail[] }) {
 
   return (
     <div className='container'>
@@ -29,7 +30,14 @@ export default function EventSingle({ menu, cocktails }: any) {
               {cocktail.fields.allergens && <sub><b>Allergeni</b>: {cocktail.fields.allergens}</sub>}
             </div>
           )
-          : <span>NO</span>
+          : <span></span>
+      }
+      {
+        menu.fields.attachments.length > 0 ?
+          menu.fields.attachments.map(att =>
+            <Image key={att.id} src={att.url} width={att.width} height={att.height}></Image>
+          )
+          : <span></span>
       }
     </div>
   )
@@ -38,11 +46,11 @@ export default function EventSingle({ menu, cocktails }: any) {
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   try {
     let res = await axios.get(`/menu/${params?.id}`);
-    let menu = res.data;
+    let menu = res.data as Menu;
 
     res = await axios.get(`/cocktail`, {
       params: {
-        'filterByFormula': `FIND("${menu.fields.name}", {menu_ids})`
+        'filterByFormula': `FIND("${menu.fields.name}", {menu_ids})`,
       }
     });
     const cocktails = res.data.records;

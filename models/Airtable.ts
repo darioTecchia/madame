@@ -3,7 +3,7 @@ export interface Airtable {
   "createdTime": Date;
 }
 
-export interface Attachments {
+export interface Attachment {
   "id": string;
   "width": number;
   "height": number;

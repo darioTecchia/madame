@@ -29,7 +29,11 @@ export default function MenusIndex({ menus }: any) {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
-    const res = await axios.get('/menu');
+    const res = await axios.get('/menu', {
+      params: {
+        'sort[0][field]': 'order'
+      }
+    });
     const menus = res.data;
     return { props: { 'menus': menus.records } }
   } catch (error: any) {
