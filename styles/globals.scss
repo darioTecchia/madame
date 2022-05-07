@@ -23,7 +23,8 @@ svg {
   width: 100%;
 }
 
-a, a:visited {
+a,
+a:visited {
   color: inherit;
   text-decoration: none;
 }
@@ -56,4 +57,18 @@ b {
   padding: 24px;
   max-width: 1000px;
   margin: auto;
+}
+
+.unblur {
+  animation: unblur .3s linear;
+}
+
+@keyframes unblur {
+  from {
+    filter: blur(20px);
+  }
+
+  to {
+    filter: blur(0);
+  }
 }

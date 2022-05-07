@@ -7,6 +7,7 @@ import styles from './Menu.single.module.scss'
 import { Menu } from '../../models/Menu';
 import { Cocktail } from '../../models/Cocktail';
 import Image from 'next/image';
+import BlurImage from '../../components/blurimage/BlurImage';
 
 export default function EventSingle({ menu, cocktails }: { menu: Menu, cocktails: Cocktail[] }) {
 
@@ -35,7 +36,8 @@ export default function EventSingle({ menu, cocktails }: { menu: Menu, cocktails
       {
         menu.fields.attachments.length > 0 ?
           menu.fields.attachments.map(att =>
-            <Image placeholder='blur' blurDataURL={att.thumbnails.small.url} key={att.id} src={att.url} width={att.width} height={att.height}></Image>
+            <BlurImage key={att.id} image={att}>
+            </BlurImage>
           )
           : <span></span>
       }
