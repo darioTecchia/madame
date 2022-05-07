@@ -12,10 +12,9 @@ import BlurImage from '../../components/blurimage/BlurImage';
 export default function EventSingle({ menu, cocktails }: { menu: Menu, cocktails: Cocktail[] }) {
 
   return (
-    <div className='container'>
-      <h1>{menu.fields.name}</h1>
-      <sub>{menu.fields.description}</sub>
-      <br />
+    <div>
+      <h1 className='container'>{menu.fields.name}</h1>
+      <sub className='container'>{menu.fields.description}</sub>
       <br />
       {
         cocktails?.length > 0 ?
@@ -33,14 +32,16 @@ export default function EventSingle({ menu, cocktails }: { menu: Menu, cocktails
           )
           : <span></span>
       }
-      {
-        menu.fields.attachments.length > 0 ?
-          menu.fields.attachments.map(att =>
-            <BlurImage key={att.id} image={att}>
-            </BlurImage>
-          )
-          : <span></span>
-      }
+      <div className={styles.imagesContainer}>
+        {
+          menu.fields.attachments.length > 0 ?
+            menu.fields.attachments.map(att =>
+              <BlurImage key={att.id} image={att}>
+              </BlurImage>
+            )
+            : <span></span>
+        }
+      </div>
     </div>
   )
 }

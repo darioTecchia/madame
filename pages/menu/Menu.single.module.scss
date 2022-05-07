@@ -22,3 +22,13 @@
     }
   }
 }
+
+.imagesContainer {
+  padding: 24px;
+  max-width: 1000px;
+  margin: auto;
+
+  @media (orientation: portrait) {
+    padding: 24px 0;
+  }
+}
